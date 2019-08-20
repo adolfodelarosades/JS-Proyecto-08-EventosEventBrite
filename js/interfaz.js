@@ -29,4 +29,24 @@ class Interfaz {
                 });
             });
     }
+    //Método para imprimir mensajes
+    mostrarMensaje(mensaje, clases){
+        const div = document.createElement('div');
+        div.classList = clases;
+        //Agregar texto
+        div.appendChild(document.createTextNode(mensaje));
+        //Buscar un padre
+        const buscadorDiv = document.querySelector('#buscador');
+        buscadorDiv.appendChild(div);
+        setTimeout(() => {
+            this.limpiarMensaje();
+        }, 3000);
+    }
+    //Desaparecer el mensaje en caso de que exista
+    limpiarMensaje(){
+        const alert = document.querySelector('.alert');
+        if(alert){
+            alert.remove();
+        }
+    }
 }

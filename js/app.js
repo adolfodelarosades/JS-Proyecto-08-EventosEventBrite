@@ -18,6 +18,7 @@ document.getElementById('buscarBtn').addEventListener('click', (e)=>{
     if(textoBuscar !== ''){
         console.log('Buscando...');
     }else{
-        console.log('Incica lo que deseas buscar.');
+        //Mostrar mensaje para que escriba algo en el buscador
+        ui.mostrarMensaje('Escribe algo en "Buscar por Nombre o Ciudad"', 'alert alert-danger mt-4');
     }
 });
