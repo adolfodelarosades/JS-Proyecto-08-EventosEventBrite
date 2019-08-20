@@ -58,8 +58,10 @@ class Interfaz {
         //Recorrer los eventos y crear su template
         listaEventos.forEach(evento => {
             let desc = evento.description.text;
-            desc = (desc !== null) ? desc.substring(0,280) + '...' : '';
-            
+            let cap = evento.capacity;
+            desc = (desc !== null) ? desc.substring(0,280) + '...' : '';            
+            cap = (cap !== null) ? cap : '';
+        
             this.listado.innerHTML += `
                 <div class="col-md-4 mb-4">
                     <div class="card">
@@ -69,7 +71,7 @@ class Interfaz {
                                 <h2 class="text-center">${evento.name.text}</h2>
                                 <p class="lead text-info">Información del evento</p>
                                 <p>${desc}</p>
-                                <span class="badge badge-primary">Capacidad: ${evento.capacity}</span>
+                                <span class="badge badge-primary">Capacidad: ${cap}</span>
                                 <span class="badge badge-primary">Fecha y Hora: ${evento.start.local}</span>
                                 <a href="${evento.url}" target="_blank" class="btn btn-primary btn-block mt-4">Comprar Boletos</a>
                             </div>
