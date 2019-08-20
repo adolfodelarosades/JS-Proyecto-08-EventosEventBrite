@@ -1,5 +1,7 @@
 # Eventos con Event Brite
 
+[Eventos con Event Brite](https://adolfodelarosades.github.io/JS-Proyecto-08-EventosEventBrite/)
+
 El proyecto Eventos con Event Brite tiene las siguientes características.
 
 * Consumir los eventos desde la API de Event Brite
