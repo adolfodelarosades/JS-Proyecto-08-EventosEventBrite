@@ -16,7 +16,11 @@ document.getElementById('buscarBtn').addEventListener('click', (e)=>{
 
     //Revisar que haya algo escrito en el buscador
     if(textoBuscar !== ''){
-        console.log('Buscando...');
+        //Cuando si hay una búsqueda
+        eventbrite.obtenerEventos(textoBuscar, categoriaSeleccionada)
+            .then(data => {
+                console.log(data);
+            })
     }else{
         //Mostrar mensaje para que escriba algo en el buscador
         ui.mostrarMensaje('Escribe algo en "Buscar por Nombre o Ciudad"', 'alert alert-danger mt-4');
